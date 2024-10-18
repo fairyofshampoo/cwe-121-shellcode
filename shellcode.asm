@@ -11,7 +11,7 @@ imprimir_str:                   ; 3. syscall write()
         xor ebx,ebx             ; ebx = 0 
         inc ebx                 ; stdout filedescriptor: #1 
         xor edx,edx             ; edx = 0 
-        mov dl,19                ; longitud "you win!\0": 9 
+        mov dl,19                ; longitud "ganaste michelle!\v": 19 
         int 0x80                ; write(1, string, 9) 
     
         mov al,1                ; syscall exit: #1 
